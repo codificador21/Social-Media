@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  color: black;
+  color: white;
+  background-color: #181717;
   font-family: sans-serif; }
   body #layout-main {
     height: auto; }
