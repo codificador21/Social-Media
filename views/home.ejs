@@ -1,4 +1,28 @@
 
   
-    <h1>Social Media Website <%= title %></h1>
+<h1>Social Media Website/ <%= title %></h1>
+
+<section id = "feed-posts">
+    <h4>Posts</h4>
+    <form action="/posts/create" id = "new-post-forms" method="POST">
+        <textarea name="content"  cols="30" rows="3" placeholder="Type here..."></textarea>
+        <input type="submit" value="Post">
+    </form>
+    <div id = "posts-list-container">
+        <ul>
+            <% for(post of posts){ %>
+
+                <li>
+                    <small>
+                        <p><%=  post.user.name %>
+                            :</p>
+                    </small>
+                    <%=  post.content %>
+                    
+                </li>
+
+            <% } %>
+        </ul>
+    </div>
+</section>
  

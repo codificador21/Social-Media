@@ -1,28 +1,34 @@
 <header>
   
 
-    <ul>
+    
+       <div id = "title">
+        <ul>
         <li id = "name">
             <i class="fas fa-comments"></i>
              <b>Social Media</b>
         </li>
+        </ul>
+       </div>
         <div id = "alignr">
-        <%  if(locals.user){ %>
+            <ul>
+                <%  if(locals.user){ %>
             
-            <li>
-                <a href="/users/profile"><i class="fas fa-user-circle"></i> <%= user.name %> </a>
-            </li>
-            <li>
-                <a href="/users/sign-out"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
-            </li>
-        <% }else{ %>
-            <li>
-                <a href="/users/sign-in"><i class="fas fa-sign-in-alt"></i>Sign In</a>
-            </li>
-            <li>
-                <a href="/users/sign-up"><i class="fas fa-user-plus"></i>Sign Up</a>
-            </li>
+                    <li>
+                        <a href="/users/profile"><i class="fas fa-user-circle"></i> <%= user.name %> </a>
+                    </li>
+                    <li>
+                        <a href="/users/sign-out"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
+                    </li>
+                <% }else{ %>
+                    <li>
+                        <a href="/users/sign-in"><i class="fas fa-sign-in-alt"></i>Sign In</a>
+                    </li>
+                    <li>
+                        <a href="/users/sign-up"><i class="fas fa-user-plus"></i>Sign Up</a>
+                    </li>
+                </ul>
         </div>
         <% } %>
-    </ul>
+    
 </header>
