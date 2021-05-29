@@ -5,17 +5,20 @@
        <div id = "title">
         <ul>
         <li id = "name">
-            <i class="fas fa-comments"></i>
-             <b>Social Media</b>
+            <a href="/"><i class="fas fa-comments"></i>
+                <b>Social Media</b></a>
         </li>
         </ul>
        </div>
         <div id = "alignr">
             <ul>
                 <%  if(locals.user){ %>
+                    <li>
+                        <a href="/"><i class="fas fa-home"></i> Home </a>
+                    </li>
             
                     <li>
-                        <a href="/users/profile"><i class="fas fa-user-circle"></i> <%= user.name %> </a>
+                        <a href="/users/profile/<%= user.id %>"><i class="fas fa-user-circle"></i> Profile </a>
                     </li>
                     <li>
                         <a href="/users/sign-out"><i class="fas fa-sign-out-alt"></i>Sign Out</a>
