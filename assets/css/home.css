@@ -7,7 +7,7 @@
     width: 90%;
     padding: 10px;
     text-align: center;
-    margin-left: 10vw; }
+    margin-left: 15vw; }
     #home-container #feed-posts #post-container {
       padding: 12px; }
     #home-container #feed-posts ul {
@@ -20,19 +20,32 @@
         border-radius: 5px;
         margin: 20px;
         background-color: #181717;
-        text-align: left; }
+        text-align: left;
+        width: 50vw;
+        overflow: auto; }
         #home-container #feed-posts ul li .space-between {
           padding: 10px;
           display: flex;
           justify-content: space-between; }
-    #home-container #feed-posts .post-comments-list li {
-      border-top: 1px solid grey; }
+    #home-container #feed-posts .post-comments-list {
+      list-style: none; }
+      #home-container #feed-posts .post-comments-list li {
+        width: 42vw; }
+    #home-container #feed-posts textarea {
+      /* Tell the input to use all the available space */
+      flex-grow: 2;
+      /* And hide the input's outline, so the form looks like the outline */
+      height: 10vh;
+      background-color: #181717;
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+      margin-left: 3.8vw; }
     #home-container #feed-posts form {
       /* This bit sets up the horizontal layout */
       display: flex;
       flex-direction: row;
       /* This bit draws the box around it */
-      border-top: 1px solid grey;
       border-radius: 5px;
       /* I've used padding so you can see the edges of the elements. */
       padding: 2px; }
@@ -43,16 +56,8 @@
       border: none;
       background-color: black;
       color: white;
-      outline: none; }
-    #home-container #feed-posts textarea {
-      /* Tell the input to use all the available space */
-      flex-grow: 2;
-      /* And hide the input's outline, so the form looks like the outline */
-      border: none;
-      background-color: #181717;
-      color: white;
-      border: 1px solid grey;
-      border-radius: 5px; }
+      outline: none;
+      border-top: 1px solid grey; }
     #home-container #feed-posts button {
       /* Just a little styling to make it pretty */
       border: 1px solid white;
@@ -67,7 +72,7 @@
     padding-right: 30px;
     margin: 2%;
     margin-right: 10vw;
-    height: auto;
+    height: fit-content;
     border: 1px solid lightgrey;
     border-radius: 5px;
     background-color: #181717;
