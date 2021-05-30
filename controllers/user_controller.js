@@ -47,6 +47,7 @@ module.exports.signIn = function(req,res){
 //get the signup data
 module.exports.create = function(req,res){
     if(req.body.password != req.body.confirm_password){
+        req.flash('Success','Signed up successfully');
         return res.redirect('back');
     }
 
@@ -68,11 +69,12 @@ module.exports.create = function(req,res){
 
 //Sign in and create a session for the user
 module.exports.create_session = function(req,res){
+    req.flash('success','Logged in successfuly');
     return res.redirect('/')
 }
 
 module.exports.destroySession = function(req, res){
     req.logout();
-
+    req.flash('success','You have been logged out');
     return res.redirect('/');
 }

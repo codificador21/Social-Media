@@ -1,4 +1,7 @@
-body{form {
+body{
+  
+  height: 100vh ;
+  form {
     /* This bit sets up the horizontal layout */
     display:flex;
     flex-direction:row;
@@ -31,5 +34,6 @@ body{form {
     border-radius: 5px;
   }
     color: white;
+    
     
 }

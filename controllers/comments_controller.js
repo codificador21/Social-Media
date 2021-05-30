@@ -15,13 +15,14 @@ module.exports.create = async function(req,res){
                 post.comments.push(comment);
                 post.save();
                 
+                req.flash('success','Comment posted');
                 res.redirect('/');
         
         }
     }    
         catch(err){
             console.log("Error",err);
-            return;
+            return res.redirect('/');
         }
 }
 
@@ -38,7 +39,7 @@ try{
             comment.remove();
     
             let post = await Post.findByIdAndUpdate(postId,{ $pull:{comments:req.params.id}});
-                
+            req.flash('success','Comment deleted');    
             return res.redirect('back');
             
         }else{
@@ -47,6 +48,6 @@ try{
     }
 }catch(err){
     console.log("Error",err);
-    return;
+    return res.redirect('/');
 }
 }
