@@ -4,6 +4,8 @@ body {
     /* This bit sets up the horizontal layout */
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
     /* This bit draws the box around it */
     border: 2px solid grey;
     border-radius: 5px;
@@ -18,8 +20,9 @@ body {
     color: white;
     outline: none; }
   body button {
-    /* Just a little styling to make it pretty */
-    border: 1px solid blue;
-    background: blue;
-    color: white;
-    cursor: pointer; }
+    border: 1px solid white;
+    background: white;
+    font-weight: 700;
+    color: #181717;
+    cursor: pointer;
+    border-radius: 5px; }
