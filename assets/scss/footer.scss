@@ -1,0 +1,20 @@
+footer{
+    display: flex;
+    background-color: darkslategrey;
+    color: white;
+    font-size: 1rem;
+    justify-content: space-between;
+    align-items: baseline;
+    ul{
+        
+        text-decoration: none;
+        list-style: none;
+        a{   
+            text-decoration: none;         
+            color: white;            
+            padding-left: 1vw;
+            padding-right: 1vw;            
+        }
+      
+    }
+}

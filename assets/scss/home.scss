@@ -1,0 +1,115 @@
+#home-container{
+    display: flex; 
+    flex-direction: row;
+
+    a{
+        i{
+            color: red;
+        }
+    }
+  
+    #feed-posts{
+        width: 90%;
+        padding: 10px;
+        text-align: center;
+        margin-left: 10vw;
+        
+        #post-container{
+            padding: 12px;
+            
+        }
+        ul{
+            list-style: none;
+            display:flex;
+            flex-direction:column-reverse;
+            flex-grow: 2;
+            li{
+                border: 1px solid lightgrey;
+                border-radius: 5px;
+                margin: 20px;
+                background-color: rgb(24, 23, 23);
+                text-align: left;
+                .space-between{
+                    padding: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .post-comments-list{
+            li{
+                border-top: 1px solid grey;
+            }
+        }
+        
+        form {
+            /* This bit sets up the horizontal layout */
+            display:flex;
+            flex-direction:row;
+            
+            /* This bit draws the box around it */
+            border-top:1px solid grey;
+            border-radius: 5px;
+          
+            /* I've used padding so you can see the edges of the elements. */
+            padding:2px;
+          }
+          
+          input {
+            /* Tell the input to use all the available space */
+            flex-grow:1;
+            /* And hide the input's outline, so the form looks like the outline */
+            border:none;
+            background-color: black;
+            color: white;
+            outline: none;
+          }
+          textarea{
+               /* Tell the input to use all the available space */
+            flex-grow:2;
+            /* And hide the input's outline, so the form looks like the outline */
+            border:none;
+            background-color: rgb(24, 23, 23);
+            color: white;
+            border:1px solid grey;
+            border-radius: 5px;
+           
+          }
+          
+        //   input:focus {
+        //     /* removing the input focus blue box. Put this on the form if you like. */
+        //     outline: none;
+        //   }
+          
+          button {
+            /* Just a little styling to make it pretty */
+            border:1px solid white;
+            background:white;
+            font-weight: 700;
+            color:rgb(24, 23, 23);
+            cursor: pointer;
+            border-radius: 5px;
+          }
+    }
+    #user-friends{
+        width: 20%;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin: 2%;  
+        margin-right: 10vw;    
+        height: auto;  
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        background-color: rgb(24, 23, 23);
+        text-align: left;
+        h4{
+            padding: 0;
+            border-bottom: 1px solid grey;
+            width:100%;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}

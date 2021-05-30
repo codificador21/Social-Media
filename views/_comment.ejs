@@ -1,0 +1,22 @@
+<li>
+    <p>
+       <div class = "space-between">
+        <div>
+            <i class="fas fa-user-circle"></i>
+            <%= comment.user.name %>
+            : &nbsp;
+        
+        
+        <%= comment.content %>
+        </div>
+        <div>
+            <% if(locals.user && (locals.user.id == comment.user.id || locals.user.id == post.user.id)) { %>
+                <small>
+                    <a href="/comments/destroy/<%= comment.id %>"><i class="fas fa-trash"></i></a>
+                </small>
+            <% } %> 
+        </div>
+       </div>
+        
+    </p>
+</li>

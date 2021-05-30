@@ -1,0 +1,64 @@
+header{
+    display:flex;
+    flex-direction:row;
+    background-color: rgb(24, 23, 23);
+    color: white;    
+    font-size: 1.5rem;
+    // align-items: flex-end;
+    justify-content:space-between;
+    
+    #alignr{
+        display: inline-block;
+        ul{
+           li{
+               padding: 7px 0px 7px 0px;
+               margin-left: 5px;
+               margin-right: 5px;
+               background-color: white;
+               
+            border: 1px solid white;
+            border-radius: 50px;
+            a{
+                color: rgb(24, 23, 23);
+            }
+           }
+        }
+    }
+    #title{
+        display: inline-flex;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+        li{
+            font-size: 2rem;
+            
+        }
+        i{
+            color: orangered;
+        }
+    }
+   
+    li{ 
+        
+        margin: 0;
+        display: inline;  
+           
+        
+        #name{
+            
+            color: white;           
+            margin-right: 60vw;           
+            font-weight: 900;
+            
+        }
+        a{            
+            text-decoration: none;
+            color: white;
+            // font-size: 1.5rem;
+            padding-left: 1vw;
+            padding-right: 1vw;  
+                      
+        }
+       
+    }
+}

@@ -1,0 +1,49 @@
+<li>
+    <p>
+<div class = "space-between">
+    <div>
+        <small>
+            <i class="fas fa-user-circle"></i>
+            <%=  post.user.name %>
+                :
+        </small>
+    </div>
+    <div>
+        <% if(locals.user && locals.user.id == post.user.id){%>
+            <small>
+                <a href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash"></i></a>
+            </small>
+        <% } %>    
+    <br>
+    </div>
+
+</div>
+    <div id = "post-container">
+        <%=  post.content %>
+    </div>
+
+</p>
+    
+    <div class="post-comments-list">
+        <ul id = "post-comments-<%= post._id %>">
+            <% for(comment of post.comments){ %>
+                <%-include('_comment')-%>
+            <%}%>    
+        </ul>
+
+    </div>
+    <div class = "post-comments">
+        <% if(locals.user){ %>
+
+            <form action="/comments/create" method="POST" class="buttonIn">
+                <input type="text" name="content" placeholder="Comment...">
+                <input type="hidden" name="post" value="<%=  post._id %>">
+                <button>Add Comment</button>
+            </form>
+
+        <% } %>
+        
+    </div>
+    
+    
+</li>

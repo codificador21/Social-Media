@@ -1,0 +1,81 @@
+#home-container {
+  display: flex;
+  flex-direction: row; }
+  #home-container a i {
+    color: red; }
+  #home-container #feed-posts {
+    width: 90%;
+    padding: 10px;
+    text-align: center;
+    margin-left: 10vw; }
+    #home-container #feed-posts #post-container {
+      padding: 12px; }
+    #home-container #feed-posts ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column-reverse;
+      flex-grow: 2; }
+      #home-container #feed-posts ul li {
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        margin: 20px;
+        background-color: #181717;
+        text-align: left; }
+        #home-container #feed-posts ul li .space-between {
+          padding: 10px;
+          display: flex;
+          justify-content: space-between; }
+    #home-container #feed-posts .post-comments-list li {
+      border-top: 1px solid grey; }
+    #home-container #feed-posts form {
+      /* This bit sets up the horizontal layout */
+      display: flex;
+      flex-direction: row;
+      /* This bit draws the box around it */
+      border-top: 1px solid grey;
+      border-radius: 5px;
+      /* I've used padding so you can see the edges of the elements. */
+      padding: 2px; }
+    #home-container #feed-posts input {
+      /* Tell the input to use all the available space */
+      flex-grow: 1;
+      /* And hide the input's outline, so the form looks like the outline */
+      border: none;
+      background-color: black;
+      color: white;
+      outline: none; }
+    #home-container #feed-posts textarea {
+      /* Tell the input to use all the available space */
+      flex-grow: 2;
+      /* And hide the input's outline, so the form looks like the outline */
+      border: none;
+      background-color: #181717;
+      color: white;
+      border: 1px solid grey;
+      border-radius: 5px; }
+    #home-container #feed-posts button {
+      /* Just a little styling to make it pretty */
+      border: 1px solid white;
+      background: white;
+      font-weight: 700;
+      color: #181717;
+      cursor: pointer;
+      border-radius: 5px; }
+  #home-container #user-friends {
+    width: 20%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 2%;
+    margin-right: 10vw;
+    height: auto;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background-color: #181717;
+    text-align: left; }
+    #home-container #user-friends h4 {
+      padding: 0;
+      border-bottom: 1px solid grey;
+      width: 100%; }
+    #home-container #user-friends a {
+      text-decoration: none;
+      color: white; }
