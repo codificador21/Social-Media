@@ -1,4 +1,4 @@
-<li>
+<li id = "post-<%= post._id %>">
     <p>
 <div class = "space-between">
     <div>
@@ -11,7 +11,7 @@
     <div>
         <% if(locals.user && locals.user.id == post.user.id){%>
             <small>
-                <a href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash"></i></a>
+                <a class = "delete-post-button" href="/posts/destroy/<%= post.id %>"><i class="fas fa-trash"></i></a>
             </small>
         <% } %>    
     <br>

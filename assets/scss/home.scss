@@ -23,7 +23,7 @@
         ul{
             list-style: none;
             display:flex;
-            flex-direction:column-reverse;
+            flex-direction:column;
             flex-grow: 2;
             li{
                 border: 1px solid lightgrey;
@@ -43,7 +43,8 @@
         .post-comments-list{
             
             list-style: none;
-            
+          
+
             li{
                 
                 width: 42vw;

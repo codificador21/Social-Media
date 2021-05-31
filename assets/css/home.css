@@ -13,7 +13,7 @@
     #home-container #feed-posts ul {
       list-style: none;
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
       flex-grow: 2; }
       #home-container #feed-posts ul li {
         border: 1px solid lightgrey;
