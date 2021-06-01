@@ -8,6 +8,7 @@
         <%  if(locals.user){ %>
         <form action="/posts/create" id = "new-post-forms" method="POST">
             <textarea name="content"  cols="5" rows="3" placeholder="Type here..."></textarea>
+           
             <button>Post</button>
         </form>
         <%}%>
@@ -26,7 +27,7 @@
         <h4>Friends</h4>
         <% for(u of all_users){ %>
             <p>
-                <img class = "Dp_post/comment"src="<%=u.avatar%>"  width="20">
+                <img class = "Dp_post_comment"src="<%=u.avatar%>"  width="20">
                 <a href="users/profile/<%= u.id %>"><%= u.name %></a>
             </p>
         <% } %>    

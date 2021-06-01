@@ -59,7 +59,7 @@ class PostComments {
     <p>
        <div class = "space-between">
         <div>
-        <img class = "Dp_post/comment" src="${comment.user.avatar}" width="20">
+        <img class = "Dp_post_comment" src="${comment.user.avatar}" width="20">
            ${comment.user.name}
             : &nbsp;
         

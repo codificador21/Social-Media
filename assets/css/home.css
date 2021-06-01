@@ -9,7 +9,7 @@
     text-align: center;
     margin-left: 15vw; }
     #home-container #feed-posts #post-container {
-      padding: 12px; }
+      padding: 2vw; }
     #home-container #feed-posts ul {
       list-style: none;
       display: flex;
@@ -22,6 +22,7 @@
         background-color: #181717;
         text-align: left;
         width: 50vw;
+        max-width: 50vw;
         overflow: auto; }
         #home-container #feed-posts ul li .space-between {
           padding: 10px;
@@ -84,3 +85,6 @@
     #home-container #user-friends a {
       text-decoration: none;
       color: white; }
+
+.Dp_post_comment {
+  border-radius: 50%; }

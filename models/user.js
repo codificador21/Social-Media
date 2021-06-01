@@ -19,8 +19,8 @@ const userSchema = new mongoose.Schema({
         required : true
     },
     avatar: {
-        type: String
-
+        type: String,
+        default: "C:\Users\arpit\Desktop\Social Media\assets\images\1024px-User-avatar.svg.png"
     }
 },{
     timestamps:true
