@@ -1,4 +1,4 @@
-<li>
+<li id = "comment-<%=comment._id%>">
     <p>
        <div class = "space-between">
         <div>
@@ -12,7 +12,7 @@
         <div>
             <% if(locals.user && (locals.user.id == comment.user.id || locals.user.id == post.user.id)) { %>
                 <small>
-                    <a href="/comments/destroy/<%= comment.id %>"><i class="fas fa-trash"></i></a>
+                    <a class = "delete-comment-button" href="/comments/destroy/<%=comment._id%>"><i class="fas fa-trash"></i></a>
                 </small>
             <% } %> 
         </div>
