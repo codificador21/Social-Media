@@ -14,6 +14,7 @@
                 success: function(data){
                     let newPost = newPostDom(data.data.post);
                     $('#posts-list-container>ul').prepend(newPost);
+                    $('#text-area').val("");
 
                     // to populate the 'deleteLink' parameter inside 'deletePost()' function defined below
                     // below statement means, class named 'delete-post-button' inside the object 'newPost'

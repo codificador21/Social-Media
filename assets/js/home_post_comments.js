@@ -36,6 +36,7 @@ class PostComments {
         success: function (data) {
           let newComment = pSelf.newCommentDom(data.data.comment);
           $(`#post-comments-${postId}`).prepend(newComment);
+          $('#comment-input').val("");
           pSelf.deleteComment($(' .delete-comment-button', newComment));          
 
           new Noty({
