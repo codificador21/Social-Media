@@ -59,7 +59,7 @@ class PostComments {
     <p>
        <div class = "space-between">
         <div>
-            <i class="fas fa-user-circle"></i>
+        <img class = "Dp_post/comment" src="${comment.user.avatar}" width="20">
            ${comment.user.name}
             : &nbsp;
         

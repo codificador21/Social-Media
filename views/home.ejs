@@ -26,7 +26,7 @@
         <h4>Friends</h4>
         <% for(u of all_users){ %>
             <p>
-                <i class="fas fa-user-circle"></i>
+                <img class = "Dp_post/comment"src="<%=u.avatar%>"  width="20">
                 <a href="users/profile/<%= u.id %>"><%= u.name %></a>
             </p>
         <% } %>    
