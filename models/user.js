@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
     },
     avatar: {
         type: String,
-        default: "C:\Users\arpit\Desktop\Social Media\assets\images\1024px-User-avatar.svg.png"
+        default: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1024px-User-avatar.svg.png"
     }
 },{
     timestamps:true
