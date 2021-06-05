@@ -1,6 +1,6 @@
 const Comment = require('../models/comments');
 const Post = require('../models/posts');
-const { post } = require('../routes/posts');
+const Like = require('../models/like');
 const commentsMailer = require('../mailers/comments_mailer');
 const commentEmailworker = require('../workers/comment_email_worker');
 const queue = require("../config/Kue");
@@ -31,7 +31,7 @@ module.exports.create = async function(req,res){
                         data:{
                             comment: comment
                         },
-                        message: "COmment Posted!"
+                        message: "Comment Posted!"
                     });
                 }
                 
@@ -61,6 +61,8 @@ try{
     
             //PULL IS AN INBUILT FUNCTION TO MONGOOSE
             let post = await Post.findByIdAndUpdate(postId,{ $pull:{comments:req.params.id}});
+
+            await Like.deleteMany({likeable: comment._id, onModel: 'Comment'});
 
             if(req.xhr){
                 return res.status(200).json({
