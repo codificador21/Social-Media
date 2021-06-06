@@ -69,12 +69,10 @@ class PostComments {
        </div>
        <div>
            ${comment.user.name}
-       : &nbsp;
        </div>
-        <div>
-           ${comment.content}
-        </div>
+        
    </div>
+   
         <div>
             
                 <small>
@@ -83,11 +81,15 @@ class PostComments {
             
         </div>
        </div>
-       <div id = "like-comment">  
-       <a class = "toggle-like-button" data-likes = "0" href="/likes/toggle/?id=${comment._id}&type=Comment">
-       <i class="fas fa-thumbs-up"></i> 0 
-        </a>
-       </div> 
+       <div id = "lalign">
+           ${comment.content}
+        </div>
+      <div id = "like-comment-container">
+      <div id = "like-comment">  
+      <a class = "toggle-like-button" data-likes = "0" href="/likes/toggle/?id=${comment._id}&type=Comment">
+      <i class="fas fa-thumbs-up"></i> 0 
+       </a>
+      </div> 
         
     </p>
 </li>`);

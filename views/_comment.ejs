@@ -7,13 +7,11 @@
                 <img class = "Dp_post_comment" src="<%=comment.user.avatar%>" width="25"> &nbsp;
             </div>
             <div>
-                <%= comment.user.name %>
-            : &nbsp;
+                <%= comment.user.name %> 
             </div>
-             <div>
-                <%= comment.content %>
-             </div>
+            
         </div>
+        
         <div>
             <% if(locals.user && (locals.user.id == comment.user.id || locals.user.id == post.user.id)) { %>
                 <small>
@@ -22,14 +20,19 @@
             <% } %> 
         </div>
        </div>
-       <div id = "like-comment">
-       <% if(locals.user){ %>
-        <a class = "toggle-like-button" data-likes = "<%= comment.likes.length %>" href="/likes/toggle/?id=<%=comment._id%>&type=Comment">
-            <i class="fas fa-thumbs-up"></i> <%=comment.likes.length%> 
-        </a>
-    <% }else{ %>
-        <i class="fas fa-thumbs-up"></i> <%= comment.likes.length %> 
-    <% } %> 
+       <div id = "lalign">
+        <%= comment.content %>
+     </div>
+       <div id = "like-comment-container">
+        <div id = "like-comment">
+            <% if(locals.user){ %>
+             <a class = "toggle-like-button" data-likes = "<%= comment.likes.length %>" href="/likes/toggle/?id=<%=comment._id%>&type=Comment">
+                 <i class="fas fa-thumbs-up"></i> <%=comment.likes.length%> 
+             </a>
+         <% }else{ %>
+             <i class="fas fa-thumbs-up"></i> <%= comment.likes.length %> 
+         <% } %> 
+            </div>
        </div>
     
         

@@ -6,10 +6,10 @@
   #home-container #feed-posts {
     width: 90%;
     padding: 10px;
-    text-align: center;
-    margin-left: 15vw; }
+    text-align: center; }
     #home-container #feed-posts #post-container {
-      padding: 2vw; }
+      padding: 2vw;
+      border-bottom: 1px solid white; }
     #home-container #feed-posts ul {
       list-style: none;
       display: flex;
@@ -37,13 +37,19 @@
         #home-container #feed-posts ul li .space-between-comment {
           padding: 10px;
           display: flex;
-          justify-content: space-between; }
+          justify-content: space-between;
+          border-bottom: 1px solid white; }
           #home-container #feed-posts ul li .space-between-comment #comment-name-dp {
             display: flex;
             font-size: larger; }
             #home-container #feed-posts ul li .space-between-comment #comment-name-dp img {
               border: 1px solid white; }
+        #home-container #feed-posts ul li #lalign {
+          padding: 10px; }
+    #home-container #feed-posts #like-comment-container {
+      border-top: 1px solid white; }
     #home-container #feed-posts #like-comment {
+      padding-top: 1vw;
       margin-left: 2vw;
       font-size: larger; }
       #home-container #feed-posts #like-comment a {
@@ -52,13 +58,14 @@
         #home-container #feed-posts #like-comment a i {
           color: white; }
     #home-container #feed-posts .post-comments-list {
-      list-style: none; }
+      list-style: none;
+      border-top: 1px solid white; }
       #home-container #feed-posts .post-comments-list li {
         width: 42vw; }
     #home-container #feed-posts textarea {
       /* Tell the input to use all the available space */
-      flex-grow: 2;
       /* And hide the input's outline, so the form looks like the outline */
+      width: 48vw;
       height: 10vh;
       background-color: black;
       color: white;
@@ -91,13 +98,13 @@
       cursor: pointer;
       border-radius: 5px; }
   #home-container #user-friends {
-    width: 20%;
+    width: 15%;
     padding-left: 30px;
     padding-right: 30px;
-    margin: 2%;
-    margin-right: 10vw;
     height: fit-content;
     border: 1px solid lightgrey;
+    margin-left: 2%;
+    margin-top: 2%;
     border-radius: 5px;
     background-color: black;
     text-align: left; }
