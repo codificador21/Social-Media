@@ -19,7 +19,7 @@
         border: 1px solid lightgrey;
         border-radius: 5px;
         margin: 20px;
-        background-color: #181717;
+        background-color: black;
         text-align: left;
         width: 50vw;
         max-width: 50vw;
@@ -60,7 +60,7 @@
       flex-grow: 2;
       /* And hide the input's outline, so the form looks like the outline */
       height: 10vh;
-      background-color: #181717;
+      background-color: black;
       color: white;
       border: 1px solid white;
       border-radius: 5px;
@@ -99,7 +99,7 @@
     height: fit-content;
     border: 1px solid lightgrey;
     border-radius: 5px;
-    background-color: #181717;
+    background-color: black;
     text-align: left; }
     #home-container #user-friends h4 {
       padding: 0;

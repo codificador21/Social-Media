@@ -3,16 +3,16 @@
   bottom: 0px;
   right: 10px;
   border: 1px dashed grey;
-  height: 300px;
-  width: 250px;
-  background: #181717;
+  height: 50vh;
+  width: 20vw;
+  background: black;
   padding: 5px;
   box-shadow: 1px 1px 1px 1px lightgrey; }
   #user-chat-box #chat-messages-list {
     list-style: none;
     padding: 0px;
     height: 78%;
-    background-color: #181717;
+    background-color: black;
     overflow: auto; }
     #user-chat-box #chat-messages-list .other-message {
       text-align: left;
@@ -43,7 +43,9 @@
       height: 40%;
       width: 70%;
       border-radius: 20px;
-      padding-left: 5px; }
+      padding-left: 5px;
+      background-color: #1e1e1e;
+      color: white; }
     #user-chat-box #chat-message-input-container #send-message {
       height: 50%;
       width: 30%;

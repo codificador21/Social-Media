@@ -1,0 +1,49 @@
+main {
+  display: flex;
+  justify-content: space-around; }
+  main #space-around {
+    margin: 5vw;
+    background-color: rgba(200, 200, 200, 0.2);
+    text-align: center;
+    border: 1px solid white;
+    width: 35vw;
+    border-radius: 10px;
+    padding: 5vh; }
+    main #space-around #sign-up-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column; }
+      main #space-around #sign-up-container form .input-box input {
+        margin: 2vh 0 2vh 0;
+        width: 30vw;
+        height: 5vh;
+        background-color: white;
+        color: black;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        padding-left: 1vw; }
+      main #space-around #sign-up-container form #Submit input {
+        margin: 2vh 0 2vh 0;
+        width: 31.5vw;
+        height: 5vh;
+        background-color: blue;
+        color: white;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        padding-left: 1vw; }
+      main #space-around #sign-up-container #Google {
+        margin: 5vh;
+        width: 29.5vw;
+        height: 4vh;
+        background-color: orangered;
+        color: white;
+        border-radius: 20px;
+        font-size: 1.5rem;
+        padding-left: 1vw;
+        padding-top: 1vh; }
+        main #space-around #sign-up-container #Google a {
+          text-decoration: none;
+          color: white; }
+    main #space-around a {
+      text-decoration: none;
+      color: skyblue; }

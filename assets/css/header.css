@@ -1,7 +1,7 @@
 header {
   display: flex;
   flex-direction: row;
-  background-color: #181717;
+  background-color: black;
   color: white;
   font-size: 1.5rem;
   justify-content: space-between; }
@@ -15,7 +15,7 @@ header {
       border: 1px solid white;
       border-radius: 50px; }
       header #alignr ul li a {
-        color: #181717; }
+        color: black; }
   header #title {
     display: inline-flex;
     align-items: flex-start;

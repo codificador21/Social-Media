@@ -1,13 +1,34 @@
-<h1>Sign in</h1>
+<link rel="stylesheet" href="/css/user_sign_in.css">
 
-<form action="/users/create-session" method="POST">
-
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="submit" value="Sign In">
-
-</form>
-
-<p>
-    <a href="/users/auth/google">google sign in/sign up</a>
-</p>
+<main>
+    <div id = "space-around">
+        <div id = "sign-in-container">
+            <h1>Sign In</h1>
+            <form action="/users/create-session" method="POST">
+            
+                <div class = "input-box">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+            
+                <div class = "input-box">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div id = Submit>
+                    <input type="submit" value="Sign In">
+                </div>
+            </form>
+            
+        
+            <div id = "Google">
+                <a href="/users/auth/google"><i class="fab fa-google"></i> | Continue with Google</a>
+            </div>
+            <div>
+                New to Social Media? <a href="/users/sign-up">Sign Up</a>
+            </div>
+        
+        </div>
+        <div>
+    
+        </div>
+    </div>
+</main>

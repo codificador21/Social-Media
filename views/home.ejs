@@ -3,8 +3,8 @@
    <link rel="stylesheet" href="/css/home.css">
 
 <div id = "home-container">
+    
     <section id = "feed-posts">
-        <h4>Posts</h4>
         <%  if(locals.user){ %>
         <form action="/posts/create" id = "new-post-forms" method="POST">
             <textarea id= "text-area" name="content"  cols="5" rows="3" placeholder="Type here..."></textarea>

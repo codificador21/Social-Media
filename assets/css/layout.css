@@ -1,7 +1,9 @@
 body {
   margin: 0;
   color: white;
+  background-image: url("https://cutewallpaper.org/21/social-media-wallpapers/Media-Wallpaper-40+-Group-Wallpapers.jpg");
   background-color: black;
+  background-position: center;
   font-family: sans-serif; }
   body #layout-main {
     height: auto; }

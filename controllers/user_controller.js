@@ -73,35 +73,41 @@ module.exports.signIn = function(req,res){
     }
 
     return res.render('user_sign_in',{
-        title: 'Social Media Website | SignIn'
+        title: 'Social Media | SignIn'
     })
 }
 
 //get the signup data
 module.exports.create = function(req,res){
-    if(req.body.password != req.body.confirm_password){
-        req.flash('Success','Signed up successfully');
+    if (req.body.password != req.body.confirm_password) {
+        req.flash('error', 'Passwords do not match!');
         return res.redirect('back');
-    }
-
+      }
     User.findOne({email: req.body.email},function(err,user){
-        if(err){
-            console.log("Error in finding user in signing up");
-        }
-        if(!user){
-            User.create(req.body,function(err,user){
-                if(err){ console.log("Error in creating user while signing up"); }
-                return res.redirect('/users/sign-in/');
+        if (err) {
+            req.flash('error', 'Error in finding user in signing up.');
+            return;
+          }
+          if (!user) {
+            // if user is not created
+            User.create(req.body, function (err, user) {
+              if (err) {
+                req.flash('error', 'Error in creating user while signing up.');
+                return;
+              }
+              return res.redirect('/users/sign-in'); //url
             });
-        }
-        else{
+          } else {
+            // i.e. user is already created
+            req.flash('success', 'You have signed up, login to continue.');
             return res.redirect('back');
-        }
-    });
+          }
+        });
 }
 
 //Sign in and create a session for the user
 module.exports.create_session = function(req,res){
+   
     req.flash('success','Logged in successfuly');
     return res.redirect('/')
 }
