@@ -37,12 +37,48 @@
                 max-width: 50vw;
                 overflow:auto;
                 
-                .space-between{
+                .space-between-post{
                     padding: 10px;
                     display: flex;
                     justify-content: space-between;
+                    #post-name-dp{
+
+                        display: flex;
+                        font-size: x-large;
+
+                        img{
+                            border: 1px solid white;
+                        }
+                        
+                    }
+                    border-bottom: 1px solid white;                    
+                }
+                .space-between-comment{
+                    padding: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    #comment-name-dp{
+                        display: flex;
+                        font-size: larger;
+                        img{
+                            border: 1px solid white;
+                        }
+                    }
+                    
                 }
                 
+            }
+        }
+        #like-comment{
+            margin-left: 2vw;
+            font-size: larger;
+            a{
+                
+                text-decoration: none;
+                color: white;
+                i{
+                    color: white;
+                }
             }
         }
         .post-comments-list{
@@ -125,6 +161,9 @@
         a{
             text-decoration: none;
             color: white;
+        }
+        img{
+            border: 1px solid white;
         }
     }
 }

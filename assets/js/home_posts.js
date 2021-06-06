@@ -46,30 +46,42 @@
     let newPostDom = function(post){
         return $(`<li id = "post-${post._id}">
         <p>
-    <div class = "space-between">
-        <div>
-            <small>
-            <img class = "Dp_post_comment" src="${post.user.avatar}" width="20">
-                ${ post.user.name }
-                    :
-            </small>
-        </div>
-        <div>
-            
+    <div class = "space-between-post">
+    
+    <div id = "post-name-dp">
+        
+    <div>
+        <img class = "Dp_post_comment" src="${post.user.avatar}" width="30"> &nbsp;
+    </div>
+    <div>
+        ${post.user.name}
+        
+    </div>
+
+    
+
+    </div>
+
+            <div>
+                    
                 <small>
-                    <a class = "delete-post-button" href="/posts/destroy/${post._id}"><i class="fas fa-trash"></i></a>
+                <a class = "delete-post-button" href="/posts/destroy/${post._id}"><i class="fas fa-trash"></i></a>
                 </small>
-               
-        <br>
-        </div>
+
+                <br>
+            </div>
     
     </div>
         <div id = "post-container">
         ${post.content}
         </div>
+        <div id = "like-comment">
         <a class = "toggle-like-button" data-likes = "0" href="/likes/toggle/?id=${post._id}&type=Post">
         <i class="fas fa-thumbs-up"></i> 0 
         </a>
+        &nbsp; &nbsp;
+        <i class="fas fa-comment-dots"></i> ${post.comments.length}
+        </div>
     
     </p>
         

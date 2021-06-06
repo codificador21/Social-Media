@@ -33,6 +33,9 @@
         <% } %>    
     
     </section>
+
+    <%-include('_chatbox.ejs')  -%>
+
 </div>
 <script src="/js/home_post_comments.js"></script>
 <script src="/js/home_posts.js"></script>
@@ -43,5 +46,12 @@
         let toggleLike = new ToggleLike(self);
     });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+<script src="/js/chat_engine.js"></script>
+<% if(locals.user){ %>
+<script>
+    new ChatEngine('user-chat-box','<%= locals.user.email %>','<%= locals.user.name %>');
+</script>
+<% } %>
 
  

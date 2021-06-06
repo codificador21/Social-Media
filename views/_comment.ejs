@@ -1,13 +1,18 @@
 <li id = "comment-<%=comment._id%>">
     <p>
-       <div class = "space-between">
-        <div>
-            <img class = "Dp_post_comment" src="<%=comment.user.avatar%>" width="20">
-            <%= comment.user.name %>
+       <div class = "space-between-comment">
+        <div id = "comment-name-dp">
+           
+            <div>
+                <img class = "Dp_post_comment" src="<%=comment.user.avatar%>" width="25"> &nbsp;
+            </div>
+            <div>
+                <%= comment.user.name %>
             : &nbsp;
-        
-        
-        <%= comment.content %>
+            </div>
+             <div>
+                <%= comment.content %>
+             </div>
         </div>
         <div>
             <% if(locals.user && (locals.user.id == comment.user.id || locals.user.id == post.user.id)) { %>
@@ -17,7 +22,7 @@
             <% } %> 
         </div>
        </div>
-
+       <div id = "like-comment">
        <% if(locals.user){ %>
         <a class = "toggle-like-button" data-likes = "<%= comment.likes.length %>" href="/likes/toggle/?id=<%=comment._id%>&type=Comment">
             <i class="fas fa-thumbs-up"></i> <%=comment.likes.length%> 
@@ -25,6 +30,8 @@
     <% }else{ %>
         <i class="fas fa-thumbs-up"></i> <%= comment.likes.length %> 
     <% } %> 
+       </div>
+    
         
     </p>
 </li>

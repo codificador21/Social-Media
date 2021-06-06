@@ -24,10 +24,33 @@
         width: 50vw;
         max-width: 50vw;
         overflow: auto; }
-        #home-container #feed-posts ul li .space-between {
+        #home-container #feed-posts ul li .space-between-post {
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid white; }
+          #home-container #feed-posts ul li .space-between-post #post-name-dp {
+            display: flex;
+            font-size: x-large; }
+            #home-container #feed-posts ul li .space-between-post #post-name-dp img {
+              border: 1px solid white; }
+        #home-container #feed-posts ul li .space-between-comment {
           padding: 10px;
           display: flex;
           justify-content: space-between; }
+          #home-container #feed-posts ul li .space-between-comment #comment-name-dp {
+            display: flex;
+            font-size: larger; }
+            #home-container #feed-posts ul li .space-between-comment #comment-name-dp img {
+              border: 1px solid white; }
+    #home-container #feed-posts #like-comment {
+      margin-left: 2vw;
+      font-size: larger; }
+      #home-container #feed-posts #like-comment a {
+        text-decoration: none;
+        color: white; }
+        #home-container #feed-posts #like-comment a i {
+          color: white; }
     #home-container #feed-posts .post-comments-list {
       list-style: none; }
       #home-container #feed-posts .post-comments-list li {
@@ -85,6 +108,8 @@
     #home-container #user-friends a {
       text-decoration: none;
       color: white; }
+    #home-container #user-friends img {
+      border: 1px solid white; }
 
 .Dp_post_comment {
   border-radius: 50%; }

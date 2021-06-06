@@ -61,15 +61,20 @@ class PostComments {
   newCommentDom(comment) {
     return $(`<li id = "comment-${ comment._id }">
     <p>
-       <div class = "space-between">
-        <div>
-        <img class = "Dp_post_comment" src="${comment.user.avatar}" width="20">
+       <div class = "space-between-comment">
+       <div id = "comment-name-dp">
+           
+       <div>
+           <img class = "Dp_post_comment" src="${comment.user.avatar}" width="25"> &nbsp;
+       </div>
+       <div>
            ${comment.user.name}
-            : &nbsp;
-        
-        
-        ${comment.content}
+       : &nbsp;
+       </div>
+        <div>
+           ${comment.content}
         </div>
+   </div>
         <div>
             
                 <small>
@@ -78,10 +83,11 @@ class PostComments {
             
         </div>
        </div>
-
+       <div id = "like-comment">  
        <a class = "toggle-like-button" data-likes = "0" href="/likes/toggle/?id=${comment._id}&type=Comment">
        <i class="fas fa-thumbs-up"></i> 0 
         </a>
+       </div> 
         
     </p>
 </li>`);

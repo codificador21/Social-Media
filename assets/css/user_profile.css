@@ -1,3 +1,45 @@
 body {
-  height: 100vh;
-  color: white; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  body #img-container {
+    margin-top: 20px;
+    text-align: center; }
+    body #img-container img {
+      border: 1px solid white;
+      border-radius: 50%; }
+  body #space-around {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px; }
+    body #space-around #profile-container {
+      background-color: #141414;
+      border: 1px solid white;
+      border-radius: 5px;
+      display: flex;
+      width: 40vw;
+      text-align: center;
+      flex-direction: column; }
+      body #space-around #profile-container .profile-update-input {
+        margin: 5vh; }
+    body #space-around form input {
+      width: 30vw;
+      height: 5vh;
+      background-color: black;
+      color: white;
+      padding: 10px;
+      font-size: x-large;
+      border-radius: 100px; }
+    body #space-around form button {
+      width: 15vw;
+      height: 5vh;
+      background-color: black;
+      color: white;
+      font-size: xx-large;
+      font-weight: 700;
+      padding-bottom: 10px;
+      font-size: x-large;
+      border-radius: 100px; }
+
+#profile-container:active {
+  background-color: black; }

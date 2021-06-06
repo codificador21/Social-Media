@@ -1,12 +1,16 @@
 <li id = "post-<%= post._id %>">
     <p>
-<div class = "space-between">
-    <div>
-        <small>
-            <img class = "Dp_post_comment" src="<%=post.user.avatar%>" width="20">
-            <%=  post.user.name %>
-                :
-        </small>
+<div class = "space-between-post">
+    <div id = "post-name-dp">
+        
+            <div>
+                <img class = "Dp_post_comment" src="<%=post.user.avatar%>" width="30"> &nbsp;
+            </div>
+            <div>
+                <%=  post.user.name %>
+                
+            </div>
+       
     </div>
     <div>
         <% if(locals.user && locals.user.id == post.user.id){%>
@@ -22,13 +26,17 @@
         <%=  post.content %>
     </div>
 
+   <div id = "like-comment">
     <% if(locals.user){ %>
         <a class = "toggle-like-button" data-likes = "<%= post.likes.length %>" href="/likes/toggle/?id=<%=post._id%>&type=Post">
             <i class="fas fa-thumbs-up"></i> <%=post.likes.length%> 
         </a>
     <% }else{ %>
         <i class="fas fa-thumbs-up"></i> <%= post.likes.length %> 
-    <% } %>        
+    <% } %>  
+    &nbsp; &nbsp;
+    <i class="fas fa-comment-dots"></i> <%= post.comments.length %>
+   </div>      
 
 </p>
     

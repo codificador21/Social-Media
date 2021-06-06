@@ -1,23 +1,44 @@
 <link rel="stylesheet" href="/css/user_profile.css">
 
-   <img src="<%=profile_user.avatar%>" alt="<%= profile_user.name %>" width="100">
+   <div id = "img-container">
+      <img  src="<%=profile_user.avatar%>" alt="<%= profile_user.name %>" width="200">
+   </div>
 
 
 
-<% if(user.id == profile_user.id){ %>
-   <!-- IF User matches then show the form -->
-   <form action="/users/update/<%= profile_user.id %>" enctype ="multipart/form-data"  method="POST">
-
-      <input type="text" name="name" placeholder="Your name" value="<%= profile_user.name%>" required>
-      <input type="text" name="email" placeholder="Your email" value="<%= profile_user.email%>" required>
-      <input type="file" name="avatar" placeholder="Profile Picture" id="">
-      <button>Update</button>
-   </form>
+<div id = "space-around">
+   <div id = "profile-container">
+      <% if(user.id == profile_user.id){ %>
+         <!-- IF User matches then show the form -->
+         <form action="/users/update/<%= profile_user.id %>" enctype ="multipart/form-data"  method="POST">
+            <div class="profile-update-input">
+               <h1>Update Profile</h1>
+            </div>
+            
+            <div class="profile-update-input">
+               <input type="text" name="name" placeholder="Your name" value="<%= profile_user.name%>" required>
+            </div>
    
-
-<% }else{ %>
-   <!-- else show only profile info -->
-   <p><%= profile_user.name  %></p>
-<p><%= profile_user.email  %></p>
+            <div class="profile-update-input">
+               <input type="text" name="email" placeholder="Your email" value="<%= profile_user.email%>" required>
    
-<% } %>    
+            </div>
+   
+            <div class="profile-update-input">
+               <input type="file" name="avatar" placeholder="Profile Picture" id="">
+            </div>
+   
+            <div class="profile-update-input">
+               <button>Update</button>
+            </div>
+         </form>
+         
+      
+      <% }else{ %>
+         <!-- else show only profile info -->
+         <p><%= profile_user.name  %></p>
+      <p><%= profile_user.email  %></p>
+         
+      <% } %>    
+   </div>
+</div>
