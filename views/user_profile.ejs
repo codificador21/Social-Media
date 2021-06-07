@@ -1,16 +1,19 @@
 <link rel="stylesheet" href="/css/user_profile.css">
 
-   <div id = "img-container">
-      <img  src="<%=profile_user.avatar%>" alt="<%= profile_user.name %>" width="200">
-   </div>
+   
 
 
 
 <div id = "space-around">
    <div id = "profile-container">
+      <div id = "img-container">
+         <img  src="<%=profile_user.avatar%>" alt="<%= profile_user.name %>" width="200">
+      </div>
+      <br><br><br>
       <% if(user.id == profile_user.id){ %>
          <!-- IF User matches then show the form -->
-         <form action="/users/update/<%= profile_user.id %>" enctype ="multipart/form-data"  method="POST">
+         <form action="/users/update/<%= profile_user.id %>" enctype ="multipart/form-data"  method="POST">         
+            
             <div class="profile-update-input">
                <h1>Update Profile</h1>
             </div>
@@ -24,7 +27,7 @@
    
             </div>
    
-            <div class="profile-update-input">
+            <div >
                <input type="file" name="avatar" placeholder="Profile Picture" id="">
             </div>
    

@@ -1,0 +1,122 @@
+#home-container {
+  display: flex;
+  flex-direction: row; }
+  #home-container a i {
+    color: red; }
+  #home-container #feed-posts {
+    width: 90%;
+    padding: 10px;
+    text-align: center; }
+    #home-container #feed-posts #post-container {
+      padding: 2vw;
+      border-bottom: 1px solid white; }
+    #home-container #feed-posts ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 2; }
+      #home-container #feed-posts ul li {
+        border: 1px solid lightgrey;
+        border-radius: 5px;
+        margin: 20px;
+        background-color: black;
+        text-align: left;
+        width: 50vw;
+        max-width: 50vw;
+        overflow: auto; }
+        #home-container #feed-posts ul li .space-between-post {
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid white; }
+          #home-container #feed-posts ul li .space-between-post #post-name-dp {
+            display: flex;
+            font-size: x-large; }
+            #home-container #feed-posts ul li .space-between-post #post-name-dp img {
+              border: 1px solid white; }
+        #home-container #feed-posts ul li .space-between-comment {
+          padding: 10px;
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid white; }
+          #home-container #feed-posts ul li .space-between-comment #comment-name-dp {
+            display: flex;
+            font-size: larger; }
+            #home-container #feed-posts ul li .space-between-comment #comment-name-dp img {
+              border: 1px solid white; }
+        #home-container #feed-posts ul li #lalign {
+          padding: 10px; }
+    #home-container #feed-posts #like-comment-container {
+      border-top: 1px solid white; }
+    #home-container #feed-posts #like-comment {
+      padding-top: 1vw;
+      margin-left: 2vw;
+      font-size: larger; }
+      #home-container #feed-posts #like-comment a {
+        text-decoration: none;
+        color: white; }
+        #home-container #feed-posts #like-comment a i {
+          color: white; }
+    #home-container #feed-posts .post-comments-list {
+      list-style: none;
+      border-top: 1px solid white; }
+      #home-container #feed-posts .post-comments-list li {
+        width: 42vw; }
+    #home-container #feed-posts textarea {
+      /* Tell the input to use all the available space */
+      /* And hide the input's outline, so the form looks like the outline */
+      width: 48vw;
+      height: 10vh;
+      background-color: black;
+      color: white;
+      border: 1px solid white;
+      border-radius: 5px;
+      margin-left: 3.8vw; }
+    #home-container #feed-posts form {
+      /* This bit sets up the horizontal layout */
+      display: flex;
+      flex-direction: row;
+      /* This bit draws the box around it */
+      border-radius: 5px;
+      /* I've used padding so you can see the edges of the elements. */
+      padding: 2px; }
+    #home-container #feed-posts input {
+      /* Tell the input to use all the available space */
+      flex-grow: 1;
+      /* And hide the input's outline, so the form looks like the outline */
+      border: none;
+      background-color: black;
+      color: white;
+      outline: none;
+      border-top: 1px solid grey; }
+    #home-container #feed-posts button {
+      /* Just a little styling to make it pretty */
+      border: 1px solid white;
+      background: white;
+      font-weight: 700;
+      color: #181717;
+      cursor: pointer;
+      border-radius: 5px; }
+  #home-container #user-friends {
+    width: 15%;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: fit-content;
+    border: 1px solid lightgrey;
+    margin-left: 2%;
+    margin-top: 2%;
+    border-radius: 5px;
+    background-color: black;
+    text-align: left; }
+    #home-container #user-friends h4 {
+      padding: 0;
+      border-bottom: 1px solid grey;
+      width: 100%; }
+    #home-container #user-friends a {
+      text-decoration: none;
+      color: white; }
+    #home-container #user-friends img {
+      border: 1px solid white; }
+
+.Dp_post_comment {
+  border-radius: 50%; }

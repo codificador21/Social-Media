@@ -1,0 +1,15 @@
+footer {
+  display: flex;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  justify-content: space-between;
+  align-items: baseline; }
+  footer ul {
+    text-decoration: none;
+    list-style: none; }
+    footer ul a {
+      text-decoration: none;
+      color: white;
+      padding-left: 1vw;
+      padding-right: 1vw; }

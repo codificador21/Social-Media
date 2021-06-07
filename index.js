@@ -1,8 +1,12 @@
 const express = require('express');
+const env = require('./config/environment');
+const logger = require('morgan');
 //Cookie parser
 const cookieParser = require('cookie-parser');
 
 const app = express();
+require('./config/view-helpers')(app)
+
 const port = 8000;
 const expressLayouts = require('express-ejs-layouts');
 const db = require('./config/mongoose');
@@ -21,6 +25,7 @@ const sassMiddleware = require('node-sass-middleware');
 const flash = require('connect-flash');
 //using the custom flash middleware we made in config
 const customWare = require('./config/middleware');
+const { asset_path } = require('./config/environment');
 
 //setup the chat server to be used with socket.io
 const chatServer = require('http').Server(app);
@@ -28,21 +33,29 @@ const chatSockets = require('./config/chat_sockets').chatSockets(chatServer);
 chatServer.listen(5000);
 console.log('chatServer is listing on port 5000');
 
-app.use(sassMiddleware({
-    src: './assets/scss',
-    dest: './assets/css',
-    debug:true,
-    outputStyle:'extended',
-    prefix:'/css'
-}));
+const path = require('path');
+
+if(env.name == 'development'){
+    app.use(sassMiddleware({
+        src: path.join(__dirname,env.asset_path,'scss'),
+        dest: path.join(__dirname,env.asset_path,'css'),
+        debug:true,
+        outputStyle:'extended',
+        prefix:'/css'
+    }));
+}
+
+
 
 app.use(express.urlencoded());
 
 app.use(cookieParser());
 
-app.use(express.static('./assets'));
+app.use(express.static(env.asset_path));
 //make the uploads path available to the browser
 app.use('/uploads', express.static(__dirname+'/uploads'));
+
+app.use(logger(env.morgan.mode, env.morgan.options));
 
 app.use(expressLayouts);
 //extract scripts and styles from subpages into the layout
@@ -58,7 +71,7 @@ app.set('views','./views');
 app.use(session({
     name : 'Social Media Website',
     //TODO : change the secret before deployment in the production mode
-    secret: 'abcd',
+    secret: env.session_cookie_key,
     saveUninitialized:false,
     resave:false,
     cookie:{

@@ -1,0 +1,39 @@
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  color: white;
+  font-size: 1.5rem;
+  justify-content: space-between; }
+  header #alignr {
+    display: inline-block; }
+    header #alignr ul li {
+      padding: 7px 0px 7px 0px;
+      margin-left: 5px;
+      margin-right: 5px;
+      background-color: white;
+      border: 1px solid white;
+      border-radius: 50px; }
+      header #alignr ul li a {
+        color: black; }
+  header #title {
+    display: inline-flex;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0; }
+    header #title li {
+      font-size: 2rem; }
+    header #title i {
+      color: orangered; }
+  header li {
+    margin: 0;
+    display: inline; }
+    header li #name {
+      color: white;
+      margin-right: 60vw;
+      font-weight: 900; }
+    header li a {
+      text-decoration: none;
+      color: white;
+      padding-left: 1vw;
+      padding-right: 1vw; }

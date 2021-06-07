@@ -10,6 +10,9 @@ body{
     img{
       border: 1px solid white;
       border-radius: 50%;
+      position: absolute;
+      margin-top: -115px;
+      margin-left: -100px;
     }
   }
 
@@ -17,7 +20,9 @@ body{
     display: flex;
     justify-content: space-around;
     
+    
     #profile-container{
+      margin-top: 5vw;
     background-color: rgba(20,20,20,0.6);
       border: 1px solid white;   
       border-radius: 5px; 
@@ -31,20 +36,26 @@ body{
       }
     }
     form{
+      .profile-update-input{
+        input{
+          width: 30vw;
+          height: 5vh;
+          background-color: white;
+          color:black;
+          padding: 10px;
+          font-size: x-large;
+          border-radius: 100px;
+        }
+      }
       input{
-        width: 30vw;
-        height: 5vh;
-        background-color: black;
-        color:white;
         padding: 10px;
-        font-size: x-large;
-        border-radius: 100px;
+          font-size: x-large;
       }
       button{
 
         width: 15vw;
         height: 5vh;
-        background-color: black;
+        background-color: blue;
         color: white;
         // padding: 10px;
         font-size:xx-large;
